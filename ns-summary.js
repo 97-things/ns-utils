@@ -24,7 +24,7 @@ var folders = fs.readdirSync(pth).filter(function(file) {
   return fs.statSync(path.join(pth, file)).isDirectory();
 });
 
-var things = '';
+var things = [];
 folders.forEach(function(folder) {
   var readme = path.join(pth, folder, 'README.md');
   var thingName = '';
@@ -33,12 +33,12 @@ folders.forEach(function(folder) {
     var lines = fileContent.split('\r\n');
     if (lines.length) {
       thingName = lines[0].replace('#', '').trim();
-      things += '* [{thingName}]({url}/README.md)\r\n'
-        .replace('{thingName}', thingName).replace('{url}', folder);
+      things.push('* [{thingName}]({url}/README.md)'
+        .replace('{thingName}', thingName).replace('{url}', folder));
       process.stdout.write('.');
     }
   }
 });
-things && fs.appendFileSync(path.join(pth, 'SUMMARY.md'), things);
+things.length && fs.appendFileSync(path.join(pth, 'SUMMARY.md'), things.join('\r\n'));
 
 console.log('Creating SUMMARY completed!');

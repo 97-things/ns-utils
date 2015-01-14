@@ -1,6 +1,6 @@
 {
   "name": "ns-utils",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
   },
   "preferGlobal": true,
   "bin": {
-    "ns-util": "ns.js"
+    "ns-utils": "ns.js"
   },
   "readmeFilename": "Readme.md"
 }
