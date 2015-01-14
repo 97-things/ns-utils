@@ -11,29 +11,29 @@ npm install ns-utils -g
 ## Example of Usage
 
 1. Create folder for translation
-```
-mkdir fr
-cd fr
-```
+  ```
+  mkdir fr
+  cd fr
+  ```
 
-- Initialize structure
-```
-ns-utils init
-```
+2. Initialize structure
+  ```
+  ns-utils init
+  ```
 
-- Translate things
+3. Translate things
 
-- Create summary
-```
-ns-utils summary
-```
+4. Create summary
+  ```
+  ns-utils summary
+  ```
 
-- Sort things after complete translation
-```
-ns-utils sort
-```
+5. Sort things after complete translation
+  ```
+  ns-utils sort
+  ```
 
-- Add link your translation to LANGS.md
+6. Add link your translation to LANGS.md
 
 
 ## Commands
